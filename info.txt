@@ -1,0 +1,83 @@
+Server:
+1) Instalar paquetes 
+2) Crear server basico de express
+3) Crear la carpeta de rutas
+4) Crear goalRoutes.js con todas las rutas CRUD basicas
+5) Crear la carpeta controllers para poner las controladores de las rutas
+6) Crear goalController.js y las funciones que se utilizan en goalRoutes.js
+7) Crear carpeta middlewares (Middlewares are functions that execute during the req, res cycle)
+8) En middlewares crear errorHandler para el manejo de errores
+9) Agregar errorHandler a index.js
+10) Instalar express-async-handler (for handling exceptions inside of async express routes and passing them to your express error handlers) - Evita el try-catch
+11) Utilizar express-async-handler en los controllers
+12) Crear db en mongodb y colocar variable env en .env
+13) Crear carpeta config y db.js donde se coloca la conexion a la db
+14) Crear la carpeta de models y el modelo de goals
+15) Generar funcionalidades de las rutas CRUD en controllers}
+
+Authentication:
+1) Crear el modelo User
+2) Agregar user al modelo de Goal, para asociar el usuario a un goal
+3) Crear userRoutes en routes
+4) Crear userController en controllers
+5) Instalar bcryptjs y jsonwebtoken
+6) Generar controlador para register 
+7) Generar controlador para login 
+8) Generar generateToken (JWT)
+9) Crear authMiddleware para protejer las rutas
+10) Agregar protect a la ruta de getMe y editar su controlador
+11) Proteger las rutas de goals para que el usuario acceda solo a sus goals
+12) Editar controladores de goals para relacionar un usuario a sus goals
+
+Frontend I
+1) Instalar react-redux, @reduxjs/toolkit 
+2) Crear carpeta app con store
+3) Crear index.css
+4) Agregar store y provider a index.js
+5) Crear carpeta pages con las paginas de Login, Register y Dashboard 
+6) Instalar react-router-dom y editar rutas en App.js
+7) Instalar react-icons
+8) Crear los componentes Header y Navbar
+9) Crear pagina de Register
+10) Crear pagina de Login
+11) Crear las carpetas Features > Auth
+12) Crear initialState y authSlice (Redux) y exportar a store.js
+13) Instalar axios y react-toastify (v8.1.1)
+14) Crear authService.js para las peticiones al servidor (http request)
+15) En authSlice importar authService y crear register
+16) Agregar proxy en package.json (frontend)
+17) Agregar extra reducers para register => El manejo del estado en el registro
+18) Agregar ToastContainer en App.js
+19) Dispatch register function en la pagina de Register 
+20) Editar onSubmit 
+21) Agregar useEffect para el estado 
+22) Crear componente Spinner.jsx (para cuando este en loading)
+23) Crear logout en authService, el estado en authSlice y el boton en Header.jsx
+24) Crear login en authService y authSlice
+25) Unir Login al estado
+
+Frontend II  
+1) Pequeño arreglo en los controladores del backend
+2) Restringir la vista Dashboard para los usuarios logeados (editar Dashboard.jsx)
+3) Crear goalService y goalSlice en una carpeta de Goals para features 
+4) Crear initialState de goalSlice y exportarlo a Store.js
+5) Editar Dashboard.jsx para ver los goals
+6) Crear el componenete GoalForm.jsx para agregar goals y exportarlo a Dashboard.jsx
+7) Crear createGoal en goalSlice y en goalService (token)
+8) Crear extraReducers para createGoals en goalSlice
+9) Utilizar createGoals en GoalForm
+10) Crear getGoals en goalSlice y en goalService
+11) Crear extraReducers para getGoals en goalSlice
+12) Editar Dashboard.jsx para ver los goals del usuario
+13) Crear el componenete GoalItem y pasarlo a Dashboard.jsx
+14) Editar GoalItem para eliminar goals
+15) Crear deleteGoal en goalSlice y en goalService
+16) Crear extraReducers para deleteGoal en goalSlice
+
+Deploy
+1) En el backend index.js agregar path y direccion al frontend en production (Deploy)
+2) Desde la consola en el frontend => npm run build (Crea la carpeta build)
+3) Crear el proyecto en el hosting
+4) Agregar las env de Mongo, JWT y NODE_ENV = production al hosting
+5) Si se requiere, agregar al package.json del back un postbuild script
+6) Enviar el proyecto al hosting (push)
